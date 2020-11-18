@@ -18,6 +18,8 @@ import ssl
 import csv
 import tensorflow as tf
 import itertools as it
+import matplotlib.pyplot as plt
+import numpy as np
 
 
 ########################
@@ -41,7 +43,6 @@ class_names = ["T-shirt/top","Trouser","Pullover","Dress","Coat","Sandal","Shirt
 
 #Let's look at the first image:
 class_names[y_train[0]]
-import matplotlib.pyplot as plt
 plt.imshow(X_train[0], cmap = 'binary')
 
 #How many images in train and their size?
@@ -55,7 +56,6 @@ X_test = X_test / 255.0
 
 #Let's build a multi-class classifier
 #Unique classes?
-import numpy as np
 np.unique(y_train.astype(np.uint8))
 # array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], dtype=uint8)
 
